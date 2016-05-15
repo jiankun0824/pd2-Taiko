@@ -242,6 +242,7 @@ namespace F74045076 {
 			this->lblReady->TabIndex = 11;
 			this->lblReady->Text = L"Get Ready !!!";
 			this->lblReady->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			this->lblReady->Click += gcnew System::EventHandler(this, &Form1::lblReady_Click);
 			// 
 			// label3
 			// 
@@ -461,7 +462,7 @@ namespace F74045076 {
 			// changeColor
 			// 
 			this->changeColor->Enabled = true;
-			this->changeColor->Interval = 30;
+			this->changeColor->Interval = 10;
 			this->changeColor->Tick += gcnew System::EventHandler(this, &Form1::changeColor_Tick);
 			// 
 			// pnlPause
@@ -907,6 +908,20 @@ namespace F74045076 {
 		pnlPlay->Visible = true;
 		score_text = 0;
 		timecountdown = 30;
+		for (int i = 0; i < 7;i++)
+		{
+			for each (Control^ typeL in pictureBox1->Controls)
+			{
+				if (typeL->GetType() == System::Windows::Forms::PictureBox::typeid)
+				{
+					if (typeL->Location.X >= -150)
+					{
+						pictureBox1->Controls->Remove(typeL);
+					}
+
+				}
+			}
+		}
 		ready = 6;
 		Ready->Enabled = true;
 		lblScore->Text = score_text.ToString();
@@ -999,6 +1014,20 @@ namespace F74045076 {
 		ready = 6;
 		Ready->Enabled = true;
 		score_text = 0;
+		for (int i = 0; i < 7;i++)
+		{
+			for each (Control^ typeL in pictureBox1->Controls)
+			{
+				if (typeL->GetType() == System::Windows::Forms::PictureBox::typeid)
+				{
+					if (typeL->Location.X >= -150)
+					{
+						pictureBox1->Controls->Remove(typeL);
+					}
+
+				}
+			}
+		}
 		timecountdown = 30;
 		lblScore->Text = score_text.ToString();
 		lblTime->Text = timecountdown.ToString();
@@ -1033,6 +1062,8 @@ private: System::Void Ready_Tick(System::Object^  sender, System::EventArgs^  e)
 		Ready->Enabled = false;
 	}
 	
+}
+private: System::Void lblReady_Click(System::Object^  sender, System::EventArgs^  e) {
 }
 };
 }
