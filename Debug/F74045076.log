@@ -1,5 +1,5 @@
 ﻿cl : Command line warning D9035: option 'clr:pure' has been deprecated and will be removed in a future release
   F74045076.cpp
-c:\cygwin64\home\wong jian kun\homework\project2\pd2-taiko\Form1.h(561): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-c:\cygwin64\home\wong jian kun\homework\project2\pd2-taiko\Form1.h(957): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+c:\cygwin64\home\wong jian kun\homework\project2\pd2-taiko\Form1.h(564): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+c:\cygwin64\home\wong jian kun\homework\project2\pd2-taiko\Form1.h(960): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
   F74045076.vcxproj -> C:\cygwin64\home\WONG JIAN KUN\homework\project2\pd2-Taiko\Debug\F74045076.exe

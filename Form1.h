@@ -538,7 +538,10 @@ namespace F74045076 {
 			this->Controls->Add(this->pnlPause);
 			this->DoubleBuffered = true;
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
+			this->MaximizeBox = false;
+			this->MinimizeBox = false;
 			this->Name = L"Form1";
+			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"RainbowDrum";
 			this->Load += gcnew System::EventHandler(this, &Form1::Form1_Load);
 			this->KeyDown += gcnew System::Windows::Forms::KeyEventHandler(this, &Form1::Form1_KeyDown);
